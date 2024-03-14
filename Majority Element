@@ -1,0 +1,12 @@
+/**
+ * @param {number[]} nums
+ * @return {number}
+ */
+var majorityElement = function(nums) {
+    const soln = new Map();
+    for(i of nums){
+        if(!soln[i]) soln[i] = 1
+        else soln[i]++
+        if(soln[i] > nums.length/2) return i
+    }
+};
